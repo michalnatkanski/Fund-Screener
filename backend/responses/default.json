@@ -1,0 +1,360 @@
+[
+  {
+    "currency": "USD",
+    "shareClass": "A",
+    "region": "Asia",
+    "type": "Fixed Income",
+    "fundName": "ABC Asian Markets Fund",
+    "name": "A USD Acc",
+    "isin": "XX00A1AAB00",
+    "launchDate": "2020-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": "2022-01-20T16:49:21+0000",
+      "data": [
+        {
+          "period": "1M",
+          "value": 0.11
+        },
+        {
+          "period": "3M",
+          "value": 0.17
+        },
+        {
+          "period": "6M",
+          "value": 0.54
+        },
+        {
+          "period": "1Y",
+          "value": 1.34
+        },
+        {
+          "period": "Inf",
+          "value": 2.55
+        }
+      ]
+    }
+  },
+  {
+    "currency": "USD",
+    "shareClass": "B",
+    "region": "Asia",
+    "type": "Fixed Income",
+    "fundName": "ABC Asian Markets Fund",
+    "name": "B USD Acc",
+    "isin": "XX00A1AAB21",
+    "launchDate": "2020-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": "2022-01-20T16:49:21+0000",
+      "data": [
+        {
+          "period": "1M",
+          "value": 0.14
+        },
+        {
+          "period": "3M",
+          "value": 0.13
+        },
+        {
+          "period": "6M",
+          "value": 0.64
+        },
+        {
+          "period": "1Y",
+          "value": 1.74
+        },
+        {
+          "period": "Inf",
+          "value": 2.75
+        }
+      ]
+    }
+  },
+  {
+    "currency": "USD",
+    "shareClass": "C",
+    "region": "Asia",
+    "type": "Fixed Income",
+    "fundName": "ABC Asian Markets Fund",
+    "name": "C USD Acc",
+    "isin": "XX00A1AAB31",
+    "launchDate": "2020-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": "2022-01-20T16:49:21+0000",
+      "data": [
+        {
+          "period": "1M",
+          "value": 0.17
+        },
+        {
+          "period": "3M",
+          "value": 0.11
+        },
+        {
+          "period": "6M",
+          "value": 0.88
+        },
+        {
+          "period": "1Y",
+          "value": 2.16
+        },
+        {
+          "period": "Inf",
+          "value": 2.8
+        }
+      ]
+    }
+  },
+  {
+    "currency": "USD",
+    "shareClass": "A",
+    "region": "North America",
+    "type": "Fixed Income",
+    "fundName": "ABC USA Focus Fund",
+    "name": "A USD Acc",
+    "isin": "XX00B0BBA11",
+    "launchDate": "2017-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": "2022-01-20T16:49:21+0000",
+      "data": [
+        {
+          "period": "1M",
+          "value": 1.34
+        },
+        {
+          "period": "3M",
+          "value": 2.67
+        },
+        {
+          "period": "6M",
+          "value": 5.63
+        },
+        {
+          "period": "1Y",
+          "value": 12.11
+        },
+        {
+          "period": "3Y",
+          "value": 17.12
+        },
+        {
+          "period": "5Y",
+          "value": 19.0
+        },
+        {
+          "period": "Inf",
+          "value": 23.11
+        }
+      ]
+    }
+  },
+  {
+    "currency": "USD",
+    "shareClass": "B",
+    "region": "North America",
+    "type": "Fixed Income",
+    "fundName": "ABC USA Focus Fund",
+    "name": "B USD Acc",
+    "isin": "XX00B0BBA21",
+    "launchDate": "2017-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": "2022-01-20T16:49:21+0000",
+      "data": [
+        {
+          "period": "1M",
+          "value": 1.44
+        },
+        {
+          "period": "3M",
+          "value": 2.11
+        },
+        {
+          "period": "6M",
+          "value": 5.83
+        },
+        {
+          "period": "1Y",
+          "value": 12.46
+        },
+        {
+          "period": "3Y",
+          "value": 15.23
+        },
+        {
+          "period": "5Y",
+          "value": 17.43
+        },
+        {
+          "period": "Inf",
+          "value": 21.11
+        }
+      ]
+    }
+  },
+  {
+    "currency": "USD",
+    "shareClass": "C",
+    "region": "North America",
+    "type": "Fixed Income",
+    "fundName": "ABC USA Focus Fund",
+    "name": "C USD Acc",
+    "isin": "XX00B0BBA31",
+    "launchDate": "2017-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": "2022-01-20T16:49:21+0000",
+      "data": [
+        {
+          "period": "1M",
+          "value": 1.21
+        },
+        {
+          "period": "3M",
+          "value": 1.79
+        },
+        {
+          "period": "6M",
+          "value": 4.53
+        },
+        {
+          "period": "1Y",
+          "value": 14.57
+        },
+        {
+          "period": "3Y",
+          "value": 13.88
+        },
+        {
+          "period": "5Y",
+          "value": 19.82
+        },
+        {
+          "period": "Inf",
+          "value": 32.21
+        }
+      ]
+    }
+  },
+  {
+    "currency": "USD",
+    "shareClass": "S",
+    "region": "North America",
+    "type": "Fixed Income",
+    "fundName": "ABC USA Focus Fund",
+    "name": "S USD Acc",
+    "isin": "XX00B0BBA41",
+    "launchDate": "2017-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": "2022-01-20T16:49:21+0000",
+      "data": [
+        {
+          "period": "1M",
+          "value": 1.22
+        },
+        {
+          "period": "3M",
+          "value": 1.75
+        },
+        {
+          "period": "6M",
+          "value": 4.51
+        },
+        {
+          "period": "1Y",
+          "value": 14.54
+        },
+        {
+          "period": "3Y",
+          "value": 13.76
+        },
+        {
+          "period": "5Y",
+          "value": 19.35
+        },
+        {
+          "period": "Inf",
+          "value": 30.97
+        }
+      ]
+    }
+  },
+  {
+    "currency": "USD",
+    "shareClass": "CE",
+    "region": "North America",
+    "type": "Fixed Income",
+    "fundName": "ABC USA Focus Fund",
+    "name": "CE USD Acc",
+    "isin": "XX00B0BBA51",
+    "launchDate": "2022-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": null,
+      "data": []
+    }
+  },
+  {
+    "currency": "EUR",
+    "shareClass": "C",
+    "region": "Europe",
+    "type": "Fixed Income",
+    "fundName": "ABC European Producers Fund",
+    "name": "C Eur Acc",
+    "isin": "XX00C0AAA11",
+    "launchDate": "2022-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": null,
+      "data": []
+    }
+  },
+  {
+    "currency": "EUR",
+    "shareClass": "B",
+    "region": "Europe",
+    "type": "Fixed Income",
+    "fundName": "ABC European Producers Fund",
+    "name": "B Eur Acc",
+    "isin": "XX00C0AAA21",
+    "launchDate": "2022-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": null,
+      "data": []
+    }
+  },
+  {
+    "currency": "USD",
+    "shareClass": "A",
+    "region": "Asia",
+    "type": "Fixed Income",
+    "fundName": "ABC Asian Future Trends Fund",
+    "name": "A USD Acc",
+    "isin": "XX31B0ABA11",
+    "launchDate": "2019-01-01T00:00:00+0000",
+    "performance": {
+      "asOfDate": "2022-01-20T16:49:21+0000",
+      "data": [
+        {
+          "period": "1M",
+          "value": 1.14
+        },
+        {
+          "period": "3M",
+          "value": 4.32
+        },
+        {
+          "period": "6M",
+          "value": 5.21
+        },
+        {
+          "period": "1Y",
+          "value": 7.15
+        },
+        {
+          "period": "3Y",
+          "value": 16.21
+        },
+        {
+          "period": "Inf",
+          "value": 16.27
+        }
+      ]
+    }
+  }
+]

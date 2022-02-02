@@ -1,0 +1,35 @@
+.header {
+    background: linear-gradient(260.3deg, #C6FFDD 8.1%, #FBD786 42.84%, #F7797D 73.37%);
+    height: 468px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__content {
+        margin: 0 12%;
+        margin-top: 53.67px;
+        
+    &_title {
+        margin-top: 85px;
+        color: #fff;
+        font-size:48px;
+        font-weight: 600;
+        line-height: 52.8px;
+        margin-bottom: 0;
+    }
+
+    &_description {
+        color: #fff;
+        font-size:18px;
+        font-weight: 400;
+        height: 87px;
+        line-height: 160%;
+        width:445px;
+        height: 87px;
+    }
+    }
+
+}
+

@@ -1,0 +1,33 @@
+.container {
+    padding: 0 12%;
+    margin-top: 30px;
+
+    &__tabs {
+        height:43,5px;
+
+        &_btn {
+            width:157px;
+            height: 41.93px;
+            font-size: 20px;
+            color: #2C4959;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+           text-transform: uppercase;
+           font-weight: 500;
+        }
+        &_btnActive {
+            width:157px;
+            height: 41.93px;
+            font-size: 20px;
+            color: #2C4959;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-bottom: 3px solid #FAB083;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+       
+    }
+}

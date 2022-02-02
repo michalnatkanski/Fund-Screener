@@ -1,0 +1,17 @@
+.error {
+    padding: 0;
+    min-height: 500px;
+    width: 100%;
+    color: #e39a34;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darken(rgba(255,255,255,9), 90%);
+
+    &__spinner {
+        height: 100px;
+        position: absolute;
+        animation: spin 1500ms infinite linear;
+    }
+}
