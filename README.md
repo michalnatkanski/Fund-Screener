@@ -4,6 +4,9 @@
 
 
 go to  /backend folder and type: yarn, yarn add cors,  yarn start
+
+===
+
 go to /frontend folder and type: yarn, yarn start
 
 ===
