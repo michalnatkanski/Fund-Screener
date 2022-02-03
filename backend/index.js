@@ -1,8 +1,11 @@
 const express = require('express');
 const responses = require('./responses');
 
+
 const app = express();
 const port = 3000;
+const cors = require('cors');
+app.use(cors());
 
 app.get('/', (req, res) => {
   const isGrumpy = !!process.env.GRUMPY;
