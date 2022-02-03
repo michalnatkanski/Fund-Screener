@@ -35,6 +35,7 @@ const fundsFiltering = (data, filterOptions) => {
     //alphabetical sort 
     const sortedFunds = funds.sort((a, b) => a.name.localeCompare(b.name))
 
+    //funds fiilltering by selected option
     if (currency === 'All' && region !== 'All') {
         let filteredData = sortedFunds.filter(fund => {
             return (
@@ -92,9 +93,9 @@ const searchResult = (funds, searchValue) => {
 
 const fundsReducer = (funds) => {
 
-    const result = funds.reduce((result, fund) => {
-        (result[fund.fundName] = result[fund.fundName] || []).push(fund)
-        return result;
+    const reducedFunds = funds.reduce((reducedFunds, fund) => {
+        (reducedFunds[fund.fundName] = reducedFunds[fund.fundName] || []).push(fund)
+        return reducedFunds;
     }, {});
 
     //grouping by fundname
@@ -102,13 +103,13 @@ const fundsReducer = (funds) => {
     const overview = [];
     const performance = [];
 
-    Object.keys(result).map(fundName => {
+    Object.keys(reducedFunds).map(fundName => {
 
-        const fund = result[fundName].map(fund => fund)
+        const fund = reducedFunds[fundName].map(fund => fund)
 
         const periodFilter = (periods) => periods === undefined ? { period: '-', value: '-' } : periods;
 
-        const data = result[fundName].map(fund => {
+        const data = reducedFunds[fundName].map(fund => {
 
             const m1 = periodFilter(fund.performance.data[0])
             const m3 = periodFilter(fund.performance.data[1])
@@ -133,7 +134,6 @@ const fundsReducer = (funds) => {
         overview.push({ fundName, fund })
         performance.push({ fundName, fund: data })
     })
-
     return { overview, performance };
 };
 

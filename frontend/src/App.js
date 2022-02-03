@@ -23,7 +23,3 @@ const App = () =>
   </>
 
 export default App;
-
-//memo performance
-//style poukladac
-//zrobic komponent gdy brak fundow

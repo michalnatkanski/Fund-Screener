@@ -1,0 +1,26 @@
+@mixin container-flex {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@mixin content-width {
+    width: 100%;
+    max-width: 1110px;
+    box-sizing: border-box;
+}
+
+@mixin tab-btn {
+    padding: 0 23px;
+    height: 41.93px;
+    font-size: 20px;
+    color: #2C4959;
+    margin-right: 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+}

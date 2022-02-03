@@ -22,9 +22,9 @@ const AppContextProvider = ({ resources, children }) => {
     const [filterOptions, setFilterOptions] = useState({
         currency: 'All',
         region: 'All',
-        type: 'Fixed Income',
+        type: getAllTypes(appState).allTypes[0],
     });
-   
+
     const [clearFilterBtn, setClearFilterBtn] = useState(false)
     const [search, setSearch] = useState('')
     const debounceValue = useSearchDebounce(search, 250)
@@ -40,7 +40,7 @@ const AppContextProvider = ({ resources, children }) => {
     }
 
     const setFilterDefault = () => {
-        setFilterOptions({ currency: 'All', region: 'All', type: 'Fixed Income', })
+        setFilterOptions({ currency: 'All', region: 'All', type: getAllTypes(appState).allTypes[0], })
         setClearFilterBtn(false)
     }
 
@@ -48,9 +48,7 @@ const AppContextProvider = ({ resources, children }) => {
         setSearch('')
     }
 
-    const changeActiveTab = (tab) => {setActiveTab(tab)};
-
-    //appstate || filtering
+    const changeActiveTab = (tab) => setActiveTab(tab);
 
     const getFunds = fundsFiltering(appState, filterOptions);
 

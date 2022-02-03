@@ -1,4 +1,4 @@
-import styles from '../../../styles/Accordion.module.scss';
+import styles from './Accordion.module.scss';
 
 const AccordionHeader =
     ({
@@ -6,8 +6,7 @@ const AccordionHeader =
         isOpen,
         setOpen
     }) =>
-
-       
+ 
         <div className={styles.accordion__header}>
             <button
                 className={styles.accordion__header_btn}

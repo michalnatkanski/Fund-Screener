@@ -1,18 +1,17 @@
-.header {
+@import '../../styles/mixins.scss';
+
+.container {
     background: linear-gradient(260.3deg, #C6FFDD 8.1%, #FBD786 42.84%, #F7797D 73.37%);
     height: 468px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
+    @include container-flex;
+    
     &__content {
-        margin: 0 12%;
-        margin-top: 53.67px;
+        height: 468px;
+        padding-top: 44px;
+        @include content-width;
         
     &_title {
-        margin-top: 85px;
+        margin-top: 92px;
         color: #fff;
         font-size:48px;
         font-weight: 600;

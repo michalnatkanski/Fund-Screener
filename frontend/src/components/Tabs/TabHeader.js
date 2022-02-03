@@ -1,7 +1,6 @@
-import styles from '../../styles/Accordion.module.scss';
+import styles from './Accordion/Accordion.module.scss';
 import { useAppContext } from "../../context/AppContext";
 import Accordion from '../Tabs/Accordion/Accordion';
-
 
 const TabHeader = () => {
 
@@ -28,7 +27,7 @@ const TabHeader = () => {
                                 />
                             )}
                         </> : 
-                        <div className={styles.overview__tab_notFound}>
+                        <div className={styles.tab_notFound}>
                             funds not found
                         </div>}
                 </div>
@@ -54,7 +53,7 @@ const TabHeader = () => {
                                 />
                             )}
                         </> : 
-                        <div className={styles.performance__tab_notFound}>
+                        <div className={styles.tab_notFound}>
                             funds not found  
                         </div>
                     }

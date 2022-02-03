@@ -1,0 +1,18 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.container {
+    @include container-flex;
+
+    .disclaimer {
+        @include content-width;
+        margin: 72px 0;
+
+        &__text {
+            font-size: 12px;
+            font-weight: 200;
+            line-height: 16,8px;
+            color: $text-color;
+        }
+    }
+}

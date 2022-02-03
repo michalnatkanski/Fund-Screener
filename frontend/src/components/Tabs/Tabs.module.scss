@@ -1,0 +1,25 @@
+@import '../../styles/mixins.scss';
+
+.container {
+    @include container-flex;
+    
+    .wrapper {
+        @include content-width;
+        margin-top: 35px;
+
+    &__tabs {
+        height:43,5px;
+
+        &_btn {
+            @include tab-btn; 
+        }
+
+        &_btnActive {
+            @include tab-btn; 
+            border-bottom: 3px solid #FAB083;
+           
+        }
+       
+    }
+}
+}
