@@ -13,7 +13,7 @@
 
 the application is used to display funds after the specified type. The fund type can be defined from a selection of filters or a search engine.
 
-### Repozytory
+### Repository
 
 repository contains 3 resources:
 - The `frontend/` with frontend application,
