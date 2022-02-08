@@ -1,6 +1,7 @@
 import styles from './Tabs.module.scss';
 import { useAppContext } from "../../context/AppContext";
 import TabHeader from './TabHeader';
+
 const Tabs = () => {
 
     const { activeTab, changeActiveTab } = useAppContext()

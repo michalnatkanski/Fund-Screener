@@ -1,4 +1,5 @@
 import styles from './Accordion.module.scss';
+import PropTypes from 'prop-types';
 
 const AccordionContent = ({ funds }) =>
   <>
@@ -28,3 +29,8 @@ const AccordionContent = ({ funds }) =>
   </>
 
 export default AccordionContent;
+
+AccordionContent.propTypes = {
+  funds: PropTypes.array
+}
+
