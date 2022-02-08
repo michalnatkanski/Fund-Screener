@@ -10,12 +10,12 @@
         justify-content: normal;
         align-items: normal;
         align-content: normal;
-        height: 80px;
+        height: 59px;
         border-bottom: 1px solid #E8E8E8;
       }
 
-      &_row:last-child {
-        height: 59px;    
+      &_row:first-child {
+        height: 80px;    
       }
 
       &_column {
@@ -52,12 +52,12 @@
         align-items: normal;
         align-content: normal;
         background: #FAFAFA;
-        height: 80px;
+        height: 59px;
         border-bottom: 1px solid #E8E8E8;
       }
 
-    &_row:last-child {
-        height: 59px;    
+    &_row:first-child {
+        height: 80px;    
     }
 
     &_column {
