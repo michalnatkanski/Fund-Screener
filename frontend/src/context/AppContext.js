@@ -12,6 +12,7 @@ import {
 } from "../utils/Filtering";
 
 import { useSearchDebounce } from "../utils/hooks";
+import PropTypes from 'prop-types';
 
 const AppContext = createContext();
 
@@ -92,6 +93,9 @@ export function useAppContext() {
     return context;
 }
 
-
+AppContext.propTypes = {
+    resources: PropTypes.object,
+    children: PropTypes.object
+}
 
 
