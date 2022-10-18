@@ -13,7 +13,7 @@ go to /frontend folder and type: yarn, yarn start
 
 **About Fund Screener**
 
-the application is used to display funds after the specified type. The fund type can be defined from a selection of filters or a search engine.
+the application is used to display funds by specified type. The fund type can be defined from a selection of filters or a search engine.
 ### Repository
 
 repository contains 3 resources:
