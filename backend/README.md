@@ -1,8 +1,9 @@
-# Zadanie praktyczne React.js – poziom Junior
+The `backend /` directory contains a local server based on the express.js solution which sets up a local API to be used within the application.
 
-Katalog `backend/` zawiera serwer lokalny bazujący na rozwiązaniu express.js i który to wystawia lokalne API do użycia w ramach aplikacji frontendowej.
+## How to run:
 
-## Uruchamianie aplikacji
+Before starting it for the first time, in the `backend /` directory, 
+run the command `yarn`, which will take all the necessary dependencies.
 
-Przed pierwszym uruchomieniem, w katalogu `backend/` należy odpalić komendę `yarn`, która pobierze wszystkie niezbędne zależności.
-Każdorazowe odpalenie przy pomocy komendy `yarn start` wyeksponuje API pod adresem `http://0.0.0.0:3000`.
+Each time you fire up with the command `yarn start`, 
+the API will be exposed at` http: //0.0.0.0: 3000`. :)
