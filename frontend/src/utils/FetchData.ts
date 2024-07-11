@@ -1,3 +1,6 @@
+import { Funds } from "../../types";
+
+
 async function getData() {
     const url = `http://0.0.0.0:3000`;
     const response = await fetch(url);
@@ -5,9 +8,10 @@ async function getData() {
     return data;
 }
 
-const wrapPromise = (promise) => {
+const wrapPromise = (promise: Promise<Funds>) => {
     let status = "pending";
-    let result;
+    let result: Funds | any;
+    
     let suspender = promise.then(
         (r) => {
             status = 'success';
