@@ -1,7 +1,9 @@
 
+import { Funds, Fund, FilterOptions, OverviewType, PerformanceType } from "../../types";
 //get fund types
 
-const getAllTypes = (funds) => {
+const getAllTypes = (funds: Funds) => {
+    if (!funds) return
     const currencies = funds.map(fund => fund.currency);
     const regions = funds.map(fund => fund.region);
     const types = funds.map(fund => fund.type);
@@ -13,7 +15,7 @@ const getAllTypes = (funds) => {
 
 //filtering uncompleted data
 
-const fundsFitler = ((fund) =>
+const fundsFitler = ((fund: Fund) =>
     fund &&
     fund.fundName &&
     fund.name && 
@@ -25,19 +27,22 @@ const fundsFitler = ((fund) =>
 
 //funds filtering by choosen select options
 
-const fundsFiltering = (data, filterOptions) => {
+const fundsFiltering = (data:Funds, filterOptions:FilterOptions) => {
     const { currency, region, type } = filterOptions;
+   
+    const getFunds = (data: Funds, filter: (fund: Fund) => "" | { asOfDate: string; data?: { period: string; value: number; }[] }) => {
+        return data.filter(app => filter(app))
+    }
 
-    const getFunds = (data, filter) => data.filter(app => filter(app))
-    
     const funds = getFunds(data, fundsFitler)
     
     //alphabetical sort 
+    if (!funds) return
     const sortedFunds = funds.sort((a, b) => a.name.localeCompare(b.name))
 
     //funds fiilltering by selected option
     if (currency === 'All' && region !== 'All') {
-        let filteredData = sortedFunds.filter(fund => {
+        let filteredData = sortedFunds.filter((fund: Fund) => {
             return (
                 fund.region === region &&
                 fund.type === type
@@ -46,7 +51,7 @@ const fundsFiltering = (data, filterOptions) => {
         return filteredData;
     }
     else if (region === 'All' && currency !== 'All') {
-        let filteredData = sortedFunds.filter(fund => {
+        let filteredData = sortedFunds.filter((fund: Fund) => {
             return (
                 fund.currency === currency &&
                 fund.type === type
@@ -55,7 +60,7 @@ const fundsFiltering = (data, filterOptions) => {
         return filteredData;
     }
     else if (region === 'All' && currency === 'All') {
-        let filteredData = sortedFunds.filter(fund => {
+        let filteredData = sortedFunds.filter((fund: Fund) => {
             return (
                 fund.type === type
             )
@@ -63,7 +68,7 @@ const fundsFiltering = (data, filterOptions) => {
         return filteredData;
     }
     else {
-        let filteredData = sortedFunds.filter(fund => {
+        let filteredData = sortedFunds.filter((fund: Fund) => {
             return (
                 fund.region === region &&
                 fund.currency === currency &&
@@ -76,7 +81,8 @@ const fundsFiltering = (data, filterOptions) => {
 
 //search result filtering
 
-const searchResult = (funds, searchValue) => {
+const searchResult = (funds: Funds | undefined, searchValue: string) => {
+    if (!funds) return
     if (searchValue === '') {
         return null
     } else {
@@ -91,32 +97,34 @@ const searchResult = (funds, searchValue) => {
 
 //reducer/grouping funds by fundName
 
-const fundsReducer = (funds) => {
+const fundsReducer = (funds:Funds | undefined) => {
 
-    const reducedFunds = funds.reduce((reducedFunds, fund) => {
+    if (!funds) return
+    const reducedFunds: { [key: string]: Fund[] } = funds.reduce((reducedFunds, fund) => {
         (reducedFunds[fund.fundName] = reducedFunds[fund.fundName] || []).push(fund)
         return reducedFunds;
-    }, {});
+    }, {} as { [key: string]: Fund[] });
 
     //grouping by fundname
 
-    const overview = [];
-    const performance = [];
+    const overview: OverviewType[] = [];
+    const performance: PerformanceType[] = [];
+
 
     Object.keys(reducedFunds).map(fundName => {
 
         const fund = reducedFunds[fundName].map(fund => fund)
 
-        const periodFilter = (periods) => periods === undefined ? { period: '-', value: '-' } : periods;
+        const periodFilter = (periods?: { period: string; value: number }) => periods === undefined ? { period: '-', value: '-' } : periods;
 
-        const data = reducedFunds[fundName].map(fund => {
-
-            const m1 = periodFilter(fund.performance.data[0])
-            const m3 = periodFilter(fund.performance.data[1])
-            const m6 = periodFilter(fund.performance.data[2])
-            const y1 = periodFilter(fund.performance.data[3])
-            const y3 = periodFilter(fund.performance.data[4])
-            const si = periodFilter(fund.performance.data[5])
+        const data = reducedFunds[fundName].map((fund: Fund) => {
+            const performanceData = fund.performance.data ?? [];
+            const m1 = periodFilter(performanceData[0])
+            const m3 = periodFilter(performanceData[1])
+            const m6 = periodFilter(performanceData[2])
+            const y1 = periodFilter(performanceData[3])
+            const y3 = periodFilter(performanceData[4])
+            const si = periodFilter(performanceData[5])
             const asOfDate = fund.performance.asOfDate ? fund.performance.asOfDate.split('T')[0] : '-';
 
             return {
